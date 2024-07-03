@@ -43,7 +43,7 @@ Example code for this task can be found here after September 2nd 2024.
 
 # Dataset
 
-![Sample Texts and Labels](img/overview.pdf)
+![Sample Texts and Labels](img/sample.png)
 *Figure 3: Sample texts with labels.*
 
 The dataset for this task consists of 6,644 short texts (length in characters: min=5, avg=88, max=277). Sample texts are shown in Figure 3. It includes manually labeled English food recall titles from official food agency websites (e.g., FDA). Each text is labeled by two food science or food technology experts. Upon task completion, the full dataset will be available under the Creative Commons BY-NC-SA 4.0 license on [Zenodo](https://zenodo.org/doi/10.5281/zenodo.10820657).
