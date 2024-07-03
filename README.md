@@ -56,7 +56,7 @@ Figure 3 shows a sample of the dataset. The data features "year," "month," "day,
 
 We compute the performance for ST1 and ST2 by calculating the macro $\text{F} _1$-score on the participants' predicted labels $\hat{\bf{y}}$ using the annotated labels $\bf{y}$ as ground truth. This measure is the unweighted mean of per-class $\text{F} _1$-scores over the $n$ classes. Both $\hat{\bf{y}}$ and $\bf{y}$ are vectors of $m$ samples:
 
-$\text{F} _1({\bf{y}}, \hat{{\bf{y}}}) = {\frac{2}{n} \sum} _{i=0}^{n}{\frac{\text{RCL} _i({\bf{y}}, \hat{{\bf{y}}}) \cdot \text{PRC} _i({\bf{y}}, \hat{{\bf{y}}})}{{\text{RCL} _i({\bf{y}}, \hat{{\bf{y}}})} + \text{PRC} _i({\bf{y}}, \hat{{\bf{y}}})}}$
+$\text{F} _1({\bf{y}}, \hat{{\bf{y}}}) = {\frac{2}{n} \sum} _{i=0}^{n} \frac{\text{RCL} _i ({\bf{y}}, \hat{{\bf{y}}}) \cdot \text{PRC} _i ({\bf{y}}, \hat{{\bf{y}}})}{\text{RCL} _i ({\bf{y}}, \hat{{\bf{y}}}) + \text{PRC} _i ({\bf{y}}, \hat{{\bf{y}}})}$
 
 where $\text{RCL} _c$ is the recall and $\text{PRC} _c$ is the precision for a specific class $c$.
 To combine the predictions for the hazard and product labels into one score, we take the average of the scores:
