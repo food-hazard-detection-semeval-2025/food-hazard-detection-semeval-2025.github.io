@@ -2,7 +2,7 @@
 
 The Food Hazard Detection task evaluates explainable classification systems for titles of food-incident reports collected from the web. These algorithms may help automated crawlers find and extract food issues from web sources like social media in the future. Due to the potential high economic impact, transparency is crucial for this task.
 
-![Example Data Overview](img/overview.pdf)
+![Example Data Overview](img/overview.png)
 *Figure 1: The blue boxes are model inputs; the orange boxes are ground truth labels per sub-task. The number on the right indicates unique values per label.*
 
 The SemEval-Task combines **two sub-tasks**:
@@ -13,7 +13,7 @@ The task focuses on detecting the hazard and uses a two-step scoring metric base
 
 # Task Organization
 
-![Timeline](img/timeline.pdf)
+![Timeline](img/timeline.png)
 *Figure 2: Challenge timeline: (a) training data available before the challenge; (b) validation data at the start, with gradual label release; (c) unlabeled test data for final ranking.*
 
 The timeline is shown in Figure 2. Participants get training and validation data to build, train, and assess their systems before the evaluation period. The challenge takes place on Codalab and will be divided into **five phases** (all deadlines AoE time):
