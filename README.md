@@ -61,21 +61,30 @@ Figure 3 shows a sample of the dataset. The data features "year," "month," "day,
 
 # Evaluation
 
-We compute the performance for ST1 and ST2 by calculating the macro $\text{F} _1$-score on the participants' predicted labels $\hat{\bf{y}}$ using the annotated labels $\bf{y}$ as ground truth. This measure is the unweighted mean of per-class $\text{F} _1$-scores over the $n$ classes. Both $\hat{\bf{y}}$ and $\bf{y}$ are vectors of $m$ samples:
+We compute the performance for ST1 and ST2 by calculating the macro-F<sub>1</sub>-score on the participants' predicted labels (`hazards_pred` & `products_pred`) using the annotated labels (`hazards_true` & `products_true`) as ground truth. The exact scoring function is provided here:
 
-$~~\text{F} _1({\bf{y}}, \hat{{\bf{y}}}) = {\frac{2}{n} \sum} _{i=0}^{n} \frac{\text{RCL} _i ({\bf{y}}, \hat{{\bf{y}}}) \cdot \text{PRC} _i ({\bf{y}}, \hat{{\bf{y}}})}{\text{RCL} _i ({\bf{y}}, \hat{{\bf{y}}}) + \text{PRC} _i ({\bf{y}}, \hat{{\bf{y}}})}$
+```python
+from sklearn.metrics import f1_score
 
-where $\text{RCL} _c$ is the recall and $\text{PRC} _c$ is the precision for a specific class $c$.
-To combine the predictions for the hazard and product labels into one score, we take the average of the scores:
+def compute_score(hazards_true, products_true, hazards_pred, products_pred):
+  # compute f1 for hazards:
+  f1_hazards = f1_score(
+    hazards_true,
+    hazards_pred,
+    average='macro'
+  )
 
-$~~\text{S}(Y, \hat{Y}) = \frac{\text{F} _1({\bf{y}}^{h}, \hat{{\bf{y}}}^{h}) + \text{F} _1({\bf{y}}^{p|h}, \hat{{\bf{y}}}^{p|h})}{2}$
+  # compute f1 for products:
+  f1_products = f1_score(
+    products_true[hazards_pred == hazards_true],
+    products_pred[hazards_pred == hazards_true],
+    average='macro'
+  )
 
-Here $Y = \[{\bf{y}}^{h}, {\bf{y}}^{p}\]$ is the $2 \times m$ matrix with the hazard label $\bf{y} _h$ and the product label ${\bf{y}} _{p}$ as column vectors. The vector ${\bf{y}}^{p|h}$ is defined as the entries of ${\bf{y}}^{p}$ where ${\bf{y}}^{h}$ is correctly predicted:
+  return (f1_hazards + f1_products) / 2.
+```
 
-$~~{\bf{y}}^{p|h} = \{{\bf{y}} _{j}^{p} | \hat{\bf{y}} _{j}^{h}={{\bf{y}}} _{j}^{h}\}, j \in \{1,2,...,m\}$
-
-The scalar ${\bf{y}} _{j}^{ * }$ is the $j$-th element of ${\bf{y}}^{ * }$. $\hat{Y}$ and $\hat{\bf{y}}^{p|h}$ are defined accordingly.
-With this measure, we base our rankings predominantly on the predictions for the hazard classes. Intuitively, this means that a submission with both ${\bf{y}}^{h}$ and ${\bf{y}}^{p}$ completely right will score $1.0$, a submission with ${\bf{y}}^{h}$ completely right and ${\bf{y}}^{p}$ completely wrong will score $0.5$, and any submission with ${\bf{y}}^{h}$ completely wrong will score $0.0$ independently of the value of ${\bf{y}}^{p}$.
+With this measure, we base our rankings predominantly on the predictions for the hazard classes. Intuitively, this means that a submission with both `hazards_pred` and `products_pred` completely right will score 1.0, a submission with `hazards_pred` completely right and `products_pred` completely wrong will score 0.5, and any submission with `hazards_pred` completely wrong will score 0.0 independently of the value of `products_pred`.
 
 # Task Organizers
 
