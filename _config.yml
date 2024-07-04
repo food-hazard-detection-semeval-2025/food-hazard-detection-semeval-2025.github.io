@@ -29,7 +29,7 @@ unpublished         : false
 
 # Plugins
 whitelist           : []
-plugins             : []
+plugins             : [jekyll-remote-theme]
 
 # Conversion
 markdown            : kramdown
@@ -44,6 +44,7 @@ port                : 4000
 host                : 127.0.0.1
 baseurl             : "" # does not include hostname
 show_dir_listing    : false
+remote_theme        : pages-themes/hacker@v0.2.0
 
 # Outputting
 permalink           : date
