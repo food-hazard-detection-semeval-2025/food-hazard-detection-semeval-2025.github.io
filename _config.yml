@@ -53,7 +53,11 @@ timezone            : null
 
 quiet               : false
 verbose             : false
-defaults            : []
+defaults:
+  - scope:
+      path: "_posts"
+    values:
+      layout: "posts"
 
 gist:
   noscript          : false
