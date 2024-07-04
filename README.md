@@ -3,9 +3,9 @@
 The Food Hazard Detection task evaluates explainable classification systems for titles of food-incident reports collected from the web. These algorithms may help automated crawlers find and extract food issues from web sources like social media in the future. Due to the potential high economic impact, transparency is crucial for this task.
 
 <div align="center">
-<img src="img/overview.png" alt="Example Data Overview" width="600"/>
-
-*Figure 1: The blue boxes are model inputs; the orange boxes are ground truth labels per sub-task. The number on the right indicates unique values per label.*
+   <img src="img/overview.png" alt="Example Data Overview" width="600"/>
+   <p>Figure 1: <i>The blue boxes are model inputs; the orange boxes are ground truth labels per sub-task.
+      The number on the right indicates unique values per label.</i></p>
 </div>
 
 The SemEval-Task combines **two sub-tasks**:
@@ -17,9 +17,8 @@ The task focuses on detecting the hazard and uses a two-step scoring metric base
 # Task Organization
 
 <div align="center">
-<img src="img/timeline.png" alt="Timeline" width="600"/>
-
-*Figure 2: Challenge timeline: (a) Trial Phase; (b) Conception Phase; (c) Evaluation Phase.*
+   <img src="img/timeline.png" alt="Timeline" width="600"/>
+   <p>Figure 2: <i>Challenge timeline: (a) Trial Phase; (b) Conception Phase; (c) Evaluation Phase.</i></p>
 </div>
 
 The timeline is shown in Figure 2. Participants get training and validation data to build, train, and assess their systems before the evaluation period. The challenge takes place on Codalab and will be divided into **five phases** (all deadlines AoE time):
@@ -50,9 +49,8 @@ Example code for this task can be found here after September 2nd 2024.
 # Dataset
 
 <div align="center">
-<img src="img/sample.png" alt="Sample Texts and Labels" width="400"/>
-
-*Figure 3: Sample texts with labels.*
+   <img src="img/sample.png" alt="Sample Texts and Labels" width="400"/>
+   <p>Figure 3: <i>Sample texts with labels.</i></p>
 </div>
 
 The dataset for this task consists of 6,644 short texts (length in characters: min=5, avg=88, max=277). Sample texts are shown in Figure 3. It includes manually labeled English food recall titles from official food agency websites (e.g., FDA). Each text is labeled by two food science or food technology experts. Upon task completion, the full dataset will be available under the Creative Commons BY-NC-SA 4.0 license on [Zenodo](https://zenodo.org/doi/10.5281/zenodo.10820657).
@@ -65,28 +63,16 @@ Figure 3 shows a sample of the dataset. The data features "year," "month," "day,
 
 We compute the performance for ST1 and ST2 by calculating the macro $\text{F} _1$-score on the participants' predicted labels $\hat{\bf{y}}$ using the annotated labels $\bf{y}$ as ground truth. This measure is the unweighted mean of per-class $\text{F} _1$-scores over the $n$ classes. Both $\hat{\bf{y}}$ and $\bf{y}$ are vectors of $m$ samples:
 
-<div align="center">
-   
-$\text{F} _1({\bf{y}}, \hat{{\bf{y}}}) = {\frac{2}{n} \sum} _{i=0}^{n} \frac{\text{RCL} _i ({\bf{y}}, \hat{{\bf{y}}}) \cdot \text{PRC} _i ({\bf{y}}, \hat{{\bf{y}}})}{\text{RCL} _i ({\bf{y}}, \hat{{\bf{y}}}) + \text{PRC} _i ({\bf{y}}, \hat{{\bf{y}}})}$
-
-</div>
+$~~\text{F} _1({\bf{y}}, \hat{{\bf{y}}}) = {\frac{2}{n} \sum} _{i=0}^{n} \frac{\text{RCL} _i ({\bf{y}}, \hat{{\bf{y}}}) \cdot \text{PRC} _i ({\bf{y}}, \hat{{\bf{y}}})}{\text{RCL} _i ({\bf{y}}, \hat{{\bf{y}}}) + \text{PRC} _i ({\bf{y}}, \hat{{\bf{y}}})}$
 
 where $\text{RCL} _c$ is the recall and $\text{PRC} _c$ is the precision for a specific class $c$.
 To combine the predictions for the hazard and product labels into one score, we take the average of the scores:
 
-<div align="center">
-   
-$\text{S}(Y, \hat{Y}) = \frac{\text{F} _1({\bf{y}}^{h}, \hat{{\bf{y}}}^{h}) + \text{F} _1({\bf{y}}^{p|h}, \hat{{\bf{y}}}^{p|h})}{2}$
-
-</div>
+$~~\text{S}(Y, \hat{Y}) = \frac{\text{F} _1({\bf{y}}^{h}, \hat{{\bf{y}}}^{h}) + \text{F} _1({\bf{y}}^{p|h}, \hat{{\bf{y}}}^{p|h})}{2}$
 
 Here $Y = \[{\bf{y}}^{h}, {\bf{y}}^{p}\]$ is the $2 \times m$ matrix with the hazard label $\bf{y} _h$ and the product label ${\bf{y}} _{p}$ as column vectors. The vector ${\bf{y}}^{p|h}$ is defined as the entries of ${\bf{y}}^{p}$ where ${\bf{y}}^{h}$ is correctly predicted:
 
-<div align="center">
-   
-${\bf{y}}^{p|h} = \{{\bf{y}} _{j}^{p} | \hat{\bf{y}} _{j}^{h}={{\bf{y}}} _{j}^{h}\}, j \in \{1,2,...,m\}$
-
-</div>
+$~~{\bf{y}}^{p|h} = \{{\bf{y}} _{j}^{p} | \hat{\bf{y}} _{j}^{h}={{\bf{y}}} _{j}^{h}\}, j \in \{1,2,...,m\}$
 
 The scalar ${\bf{y}} _{j}^{ * }$ is the $j$-th element of ${\bf{y}}^{ * }$. $\hat{Y}$ and $\hat{\bf{y}}^{p|h}$ are defined accordingly.
 With this measure, we base our rankings predominantly on the predictions for the hazard classes. Intuitively, this means that a submission with both ${\bf{y}}^{h}$ and ${\bf{y}}^{p}$ completely right will score $1.0$, a submission with ${\bf{y}}^{h}$ completely right and ${\bf{y}}^{p}$ completely wrong will score $0.5$, and any submission with ${\bf{y}}^{h}$ completely wrong will score $0.0$ independently of the value of ${\bf{y}}^{p}$.
@@ -109,12 +95,8 @@ You can contact the organizers using [this email address](mailto:food-hazard-det
 All texts come from official and publicly available sources, so no privacy issues are present. All annotations are provided by Agroknow experts. The systems are intended to complement but not substitute human experts in preventing illness or harm from food sources.
 
 <table>
-<tr>
-<td><img src="https://efraproject.eu/wp-content/uploads/2023/01/EFRA-logo-white-1-300x104.png" alt="EFRA Funding" width="250"/></td>
-<td>
-
-*This challenge is part of the [EFRA project for Extreme Food Risk Analysis](https://efraproject.eu/) (funded by Horizon Europe under Grant Agreement No 101093026).*
-
-</td>
-</tr>
+   <tr>
+      <td><img src="https://efraproject.eu/wp-content/uploads/2023/01/EFRA-logo-white-1-300x104.png" alt="EFRA Funding" width="250"/></td>
+      <td><i>This challenge is part of the  <a href="https://efraproject.eu/">EFRA project for Extreme Food Risk Analysis</a> (funded by Horizon Europe under Grant Agreement No 101093026).</i></td>
+   </tr>
 </table>
