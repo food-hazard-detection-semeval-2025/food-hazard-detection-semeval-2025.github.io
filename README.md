@@ -26,7 +26,7 @@ The task focuses on detecting the hazard and uses a two-step scoring metric base
 The timeline is shown in Figure 2. Participants get training and validation data to build, train, and assess their systems before the evaluation period. The challenge takes place on Codalab and will be divided into **five phases** (all deadlines AoE time):
 
 1. **Trial Phase** (*before September 2nd 2024*)
-   - [labeled trial/training data (5,082 samples)](https://github.com/food-hazard-detection-semeval-2025/food-hazard-detection-semeval-2025.github.io/tree/main/data/incidents_training.csv) are available for devising and training models.
+   - [labeled trial/training data (5,082 samples)](https://github.com/food-hazard-detection-semeval-2025/food-hazard-detection-semeval-2025.github.io/tree/main/data/incidents_train.csv) are available for devising and training models.
 
 2. **Conception Phase ST1** (*September 2nd 2024 to October 14th 2024*)
    - Unlabeled validation data (565 samples) are released
