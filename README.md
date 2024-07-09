@@ -8,6 +8,8 @@ The Food Hazard Detection task evaluates explainable classification systems for 
       The number on the right indicates unique values per label.</i></p>
 </div>
 
+Figure 1 shows a sample of the dataset. The data features "year," "month," "day," "language," "country," and "title". Additionally, we provide the full text of the recall in the column "text." Participants will base their analysis on either the "title" or the "text" feature (indicating which one they used). The task is to predict the labels "product-category" and "hazard-category" and the vectors "product" and "hazard." The class distribution is heavily imbalanced. The data includes 1,256 different products (e.g., "ice cream," "chicken based products," "cakes") sorted into 22 categories (e.g., "meat, egg and dairy products," "cereals and bakery products," "fruits and vegetables"). The 261 possible "hazard"-values (e.g., "salmonella," "listeria monocytogenes," "milk and products thereof") are sorted into 10 "hazard-category" values.
+
 The SemEval-Task combines **two sub-tasks**:
 - **(ST1)** Text classification for food hazard prediction, predicting the type of hazard and product.
 - **(ST2)** Food hazard and product "vector" detection, predicting the exact hazard and product.
@@ -24,7 +26,7 @@ The task focuses on detecting the hazard and uses a two-step scoring metric base
 The timeline is shown in Figure 2. Participants get training and validation data to build, train, and assess their systems before the evaluation period. The challenge takes place on Codalab and will be divided into **five phases** (all deadlines AoE time):
 
 1. **Trial Phase** (*before September 2nd 2024*)
-   - [labeled training data (5,082 samples)](data/incidents _training _full.csv) are available for devising and training models.
+   - [labeled trial/training data (5,082 samples)](data/incidents _training _full.csv) are available for devising and training models.
 
 2. **Conception Phase ST1** (*September 2nd 2024 to October 14th 2024*)
    - Unlabeled validation data (565 samples) are released
@@ -44,7 +46,7 @@ The timeline is shown in Figure 2. Participants get training and validation data
 
 **Explainability** in food risk classification based on texts is currently underexplored although it may help humans quickly assess prediction validity and can be used for meta-learning approaches like clustering or pre-sorting examples. However, explanations can be diverse and task/model-dependent. Current literature includes both model-specific ([Assael et al., 2022](https://www.nature.com/articles/s41586-022-04448-z); [Pavlopoulos et al., 2022](https://aclanthology.org/2022.acl-long.259/)) and model agnostic ([Ribeiro et al., 2016](https://aclanthology.org/N16-3020/)) approaches. We aim to study mechanisms to explain decisions on food safety risks by asking participants to submit precise "vector"-labels (ST2) as explanations for their ST1 predictions.
 
-Example code for this task can be found here after September 2nd 2024.
+Example code for this task can be found [here](https://github.com/food-hazard-detection-semeval-2025/food-hazard-detection-semeval-2025.github.io/tree/main/code).
 
 # Dataset
 
@@ -54,10 +56,6 @@ Example code for this task can be found here after September 2nd 2024.
 </div>
 
 The dataset for this task consists of 6,644 short texts (length in characters: min=5, avg=88, max=277). Sample texts are shown in Figure 3. It includes manually labeled English food recall titles from official food agency websites (e.g., FDA). Each text is labeled by two food science or food technology experts. Upon task completion, the full dataset will be available under the Creative Commons BY-NC-SA 4.0 license on [Zenodo](https://zenodo.org/doi/10.5281/zenodo.10820657).
-
-## The Ground Truth
-
-Figure 3 shows a sample of the dataset. The data features "year," "month," "day," "language," "country," "title," and "text." Participants will base their analysis on either the "title" or the "text" feature (indicating which one they used). The task is to predict the labels "product-category" and "hazard-category" and the vectors "product" and "hazard." The class distribution is heavily imbalanced. The data includes 1,256 different products (e.g., "ice cream," "chicken based products," "cakes") sorted into 22 categories (e.g., "meat, egg and dairy products," "cereals and bakery products," "fruits and vegetables"). The 261 possible "hazard"-values (e.g., "salmonella," "listeria monocytogenes," "milk and products thereof") are sorted into 10 "hazard-category" values.
 
 # Evaluation
 
