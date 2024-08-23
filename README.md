@@ -23,29 +23,25 @@ The task focuses on detecting the hazard and uses a two-step scoring metric base
    <p>Figure 2: <i>Challenge timeline: (a) Trial Phase; (b) Conception Phase; (c) Evaluation Phase.</i></p>
 </div>
 
-The timeline is shown in Figure 2. Participants get training and validation data to build, train, and assess their systems before the evaluation period. The challenge takes place on [Codalab](https://codalab.lisn.upsaclay.fr/competitions/19955) and will be divided into **five phases** (all deadlines AoE time):
+The timeline is shown in Figure 2. Participants get training and validation data to build, train, and assess their systems before the evaluation period. The challenge takes place on [Codalab](https://codalab.lisn.upsaclay.fr/competitions/19955) and will be divided into **four phases** (all deadlines AoE time):
 
 1. **Trial Phase** (*before September 2nd 2024*)
    - [labeled trial/training data (5,082 samples)](https://github.com/food-hazard-detection-semeval-2025/food-hazard-detection-semeval-2025.github.io/tree/main/data/incidents_train.csv) are available for devising and training models.
 
-2. **Conception Phase ST1** (*September 2nd 2024 to October 14th 2024*)
+2. **Conception Phase** (*September 2nd 2024 to January 10th 2025*)
    - [Unlabeled validation data (565 samples)](https://codalab.lisn.upsaclay.fr/my/datasets/download/26c12bc0-3878-4edf-8b4a-9682763c0b7e) are released
    - [Unlabeled test data (997 samples)](https://codalab.lisn.upsaclay.fr/my/datasets/download/5695a2da-4c2b-4447-8c0c-2a30252f648c) are released
-   - [Codalab](https://codalab.lisn.upsaclay.fr/competitions/19955) accepts test submissions for ST1 (category classification) **on the validation data**. Only the predictions in **.csv** format will be uploaded.
+   - [Codalab](https://codalab.lisn.upsaclay.fr/competitions/19955) accepts separate trial submissions for ST1 (category classification) and ST2 (vector classification) **on the validation data**. Only the predictions in **.csv** format (zipped) will be uploaded.
 
-3. **Conception Phase ST2** (*October 14th 2024 to January 10th 2025*)
-   - Validation labels for ST1 are released
-   - [Codalab](https://codalab.lisn.upsaclay.fr/competitions/19955) accepts test submissions for ST2 (vector classification) **on the validation data**. Only the predictions in **.csv** format will be uploaded.
+3. **Evaluation Phase** (*January 10th 2025 to January 17th 2025*)
+   - Validation labels (ST1 and ST2) are released
+   - [Codalab](https://codalab.lisn.upsaclay.fr/competitions/19955) accepts final submissions for both tasks **on the test data**. Only the predictions in **.csv** format (zipped) will be uploaded.
 
-4. **Evaluation Phase** (*January 10th 2025 to January 17th 2025*)
-   - Validation labels for ST2 are released
-   - [Codalab](https://codalab.lisn.upsaclay.fr/competitions/19955) accepts final submissions for both tasks **on the test data**. Only the predictions in **.csv** format will be uploaded.
-
-5. **Paper Phase** (*January 17th 2025 to February 28th 2025*)
-   - Labeled test data (997 samples) are released
+4. **Paper Phase** (*January 17th 2025 to February 28th 2025*)
+   - Test labels (ST1 and ST2) are released
    - Participants describe their systems in scientific papers and commit them to [SemEval 2025](https://semeval.github.io/SemEval2025/)
 
-The two stages of the Conception Phase are intended to enable participants to compare their submission to each of the sub-tasks to other participants' approaches. Therefore, we encourage uploading approaches during both stages of the conception phase to get a feel for the competition.
+The two stages of the Conception Phase are intended to enable participants to compare their submission to each of the sub-tasks to other participants' approaches. Therefore, we encourage uploading approaches for both sub-tasks of the conception phase to get a feel for the competition.
 
 **Explainability** in food risk classification based on texts is currently underexplored although it may help humans quickly assess prediction validity and can be used for meta-learning approaches like clustering or pre-sorting examples. However, explanations can be diverse and task/model-dependent. Current literature includes both model-specific ([Assael et al., 2022](https://www.nature.com/articles/s41586-022-04448-z); [Pavlopoulos et al., 2022](https://aclanthology.org/2022.acl-long.259/)) and model agnostic ([Ribeiro et al., 2016](https://aclanthology.org/N16-3020/)) approaches. We aim to study mechanisms to explain decisions on food safety risks by asking participants to submit precise "vector"-labels (ST2) as explanations for their ST1 predictions.
 
