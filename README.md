@@ -87,7 +87,7 @@ With this measure, we base our rankings predominantly on the predictions for the
 
 Here you can find the current leaderboard of the task:
 
-<iframe src="http://codalab.lisn.upsaclay.fr/competitions/submission_widget/19955/" style="height: 500px; width: 100%; border: none;"></iframe>
+<iframe src="http://codalab.lisn.upsaclay.fr/competitions/leaderboard_widget/19955/" style="height: 500px; width: 100%; border: none;"></iframe>
 
 More detailed results (per subtask) can be found [here](https://codalab.lisn.upsaclay.fr/competitions/19955#results).
 
