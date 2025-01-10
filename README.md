@@ -26,7 +26,7 @@ The task focuses on detecting the hazard and uses a two-step scoring metric base
 The timeline is shown in Figure 2. Participants get training and validation data to build, train, and assess their systems before the evaluation period. The challenge takes place on [Codalab](https://codalab.lisn.upsaclay.fr/competitions/19955) and will be divided into **four phases** (all deadlines AoE time):
 
 1. **Trial Phase** (*before September 2nd 2024*)
-   - [labeled trial/training data (5,082 samples)](https://github.com/food-hazard-detection-semeval-2025/food-hazard-detection-semeval-2025.github.io/tree/main/data/incidents_train.csv) are available for devising and training models.
+   - [Labeled trial/training data (5,082 samples)](https://github.com/food-hazard-detection-semeval-2025/food-hazard-detection-semeval-2025.github.io/tree/main/data/incidents_train.csv) are available for devising and training models.
 
 2. **Conception Phase** (*September 2nd 2024 to January 10th 2025*)
    - [Unlabeled validation data (565 samples)](https://codalab.lisn.upsaclay.fr/my/datasets/download/26c12bc0-3878-4edf-8b4a-9682763c0b7e) are released
@@ -34,7 +34,7 @@ The timeline is shown in Figure 2. Participants get training and validation data
    - [Codalab](https://codalab.lisn.upsaclay.fr/competitions/19955) accepts separate trial submissions for ST1 (category classification) and ST2 (vector classification) **on the validation data**. Only the predictions in **.csv** format (zipped) will be uploaded.
 
 3. **Evaluation Phase** (*January 10th 2025 to January 17th 2025*)
-   - Validation labels (ST1 and ST2) are released
+   - [Labeled validation data (ST1 and ST2)](https://github.com/food-hazard-detection-semeval-2025/food-hazard-detection-semeval-2025.github.io/tree/main/data/incidents_valid.csv) are released
    - [Codalab](https://codalab.lisn.upsaclay.fr/competitions/19955) accepts final submissions for both tasks **on the test data**. Only the predictions in **.csv** format (zipped) will be uploaded.
 
 4. **Paper Phase** (*January 17th 2025 to February 28th 2025*)
