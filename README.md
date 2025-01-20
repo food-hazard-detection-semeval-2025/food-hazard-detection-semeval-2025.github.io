@@ -110,7 +110,8 @@ All texts come from official and publicly available sources, so no privacy issue
 
 <table>
    <tr>
-      <td><img src="https://efraproject.eu/wp-content/uploads/2023/01/EFRA-logo-white-1-300x104.png" alt="EFRA Funding" width="250"/></td>
+      <td><img src="https://efraproject.eu/wp-content/uploads/2023/01/EFRA-logo-white-1-300x104.png" alt="EFRA Funding" height="60"/></td>
       <td><i>This challenge is part of the  <a href="https://efraproject.eu/">EFRA project for Extreme Food Risk Analysis</a> (funded by Horizon Europe under Grant Agreement No 101093026).</i></td>
+      <td><img src="https://efraproject.eu/wp-content/uploads/2023/01/EN-Funded-by-the-EU-NEG-1024x215.png" alt="EU Flag" height="60"/></td>
    </tr>
 </table>
