@@ -87,9 +87,7 @@ With this measure, we base our rankings predominantly on the predictions for the
 
 Here you can find the final leaderboard of the task:
 
-<div align="center">
-<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSHGZQIN_As8etpiZdpIFOl0tCFArK3FA1N7d4yiScAt7hfoj8LEZzYh2jk3XmZjp_hoCajOJddaj0b/pubhtml?widget=true&amp;headers=false" frameborder="0" width=100% scrolling="yes"></iframe>
-</div>
+<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSHGZQIN_As8etpiZdpIFOl0tCFArK3FA1N7d4yiScAt7hfoj8LEZzYh2jk3XmZjp_hoCajOJddaj0b/pubhtml?widget=true&amp;headers=false" frameborder="1" width="100%" scrolling="yes" height="500px"></iframe>
 
 # Task Organizers
 
