@@ -38,7 +38,7 @@ The timeline is shown in Figure 2. Participants get training and validation data
    - [Codalab](https://codalab.lisn.upsaclay.fr/competitions/19955) accepts final submissions for both tasks **on the test data**. Only the predictions in **.csv** format (zipped) will be uploaded.
 
 4. **Paper Phase** (*January 17th 2025 to February 28th 2025*)
-   - Test labels (ST1 and ST2) are released
+   - [Labeled test data (ST1 and ST2)](https://github.com/food-hazard-detection-semeval-2025/food-hazard-detection-semeval-2025.github.io/tree/main/data/incidents_test.csv) are released
    - Participants describe their systems in scientific papers and commit them to [SemEval 2025](https://semeval.github.io/SemEval2025/)
 
 The two stages of the Conception Phase are intended to enable participants to compare their submission to each of the sub-tasks to other participants' approaches. Therefore, we encourage uploading approaches for both sub-tasks of the conception phase to get a feel for the competition.
@@ -85,11 +85,11 @@ With this measure, we base our rankings predominantly on the predictions for the
 
 # Leaderboard
 
-Here you can find the current leaderboard of the task:
+Here you can find the final leaderboard of the task:
 
-<iframe src="http://codalab.lisn.upsaclay.fr/competitions/leaderboard_widget/19955/" style="height: 500px; width: 100%; border: none;"></iframe>
-
-More detailed results (per subtask) can be found [here](https://codalab.lisn.upsaclay.fr/competitions/19955#results).
+<div align="center">
+<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSHGZQIN_As8etpiZdpIFOl0tCFArK3FA1N7d4yiScAt7hfoj8LEZzYh2jk3XmZjp_hoCajOJddaj0b/pubhtml?widget=true&amp;headers=false" frameborder="0" width=100% scrolling="yes"></iframe>
+</div>
 
 # Task Organizers
 
