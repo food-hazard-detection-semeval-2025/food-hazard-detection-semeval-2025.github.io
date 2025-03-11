@@ -97,8 +97,7 @@ The organizers are:
 - **John Pavlopoulos** (lead) is Assistant Professor at Athens University of Economics and Business and has co-organized BioASQ, HTREC, and SemEval Tasks 4 (2014) and 5 (2021). He is also affiliated with Stockholm University and Archimedes/Athena RC.
 - **Aron Henriksson** is an associate professor at Stockholm University working on machine learning for NLP in healthcare and education.
 - **Tony Lindgren** is Stockholm University's project leader for the EFRA project.
-- **George Marinos** is a PhD student at Wageningen University & Research and AI Research Engineer in Agroknow, focusing on AI for forecasting food safety risks.
-- **Manos Karvounis** is the research and innovation manager and the team leader of the R&D department in Agroknow, and the project coordinator of EFRA.
+- **Juli Bakagianni** is an AI Research Associate at Agroknow, working on the EFRA project, where she focuses on NLP research to analyse and interpret data in alignment with the project's objectives.
 
 You can contact the organizers using [this email address](mailto:food-hazard-detection-semeval-2025@googlegroups.com).
 
