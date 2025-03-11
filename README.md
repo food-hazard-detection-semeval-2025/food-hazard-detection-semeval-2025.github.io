@@ -98,6 +98,7 @@ The organizers are:
 - **Aron Henriksson** is an associate professor at Stockholm University working on machine learning for NLP in healthcare and education.
 - **Tony Lindgren** is Stockholm University's project leader for the EFRA project.
 - **Juli Bakagianni** is an AI Research Associate at Agroknow, working on the EFRA project, where she focuses on NLP research to analyse and interpret data in alignment with the project's objectives.
+- **Giannis Stoitsis** is the CTO & Business Partner at Agroknow with extensive experience in developing advanced technologies for data aggregation and visualisation in the agricultural and food sectors.
 
 You can contact the organizers using [this email address](mailto:food-hazard-detection-semeval-2025@googlegroups.com).
 
